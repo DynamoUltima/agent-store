@@ -16,6 +16,9 @@ import Close from "@material-ui/icons/Close";
 import Check from "@material-ui/icons/Check";
 // core components
 import styles from "assets/jss/material-dashboard-react/components/tasksStyle.js";
+import { Share } from "@material-ui/icons";
+
+
 
 const useStyles = makeStyles(styles);
 
@@ -58,7 +61,7 @@ export default function Tasks(props) {
             <TableCell className={classes.tableActions}>
               <Tooltip
                 id="tooltip-top"
-                title="Edit Task"
+                title="Share referral codes"
                 placement="top"
                 classes={{ tooltip: classes.tooltip }}
               >
@@ -66,7 +69,7 @@ export default function Tasks(props) {
                   aria-label="Edit"
                   className={classes.tableActionButton}
                 >
-                  <Edit
+                  <Share
                     className={
                       classes.tableActionButtonIcon + " " + classes.edit
                     }

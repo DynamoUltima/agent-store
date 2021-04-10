@@ -15,11 +15,19 @@ import RTLNavbarLinks from "./RTLNavbarLinks.js";
 import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-dashboard-react/components/headerStyle.js";
+import havenlogo from "assets/img/havenlogo.jpg";
 
 const useStyles = makeStyles(styles);
+const createStyles = makeStyles({
+  logo: {
+    maxWidth: 160,
+    maxHeight:50
+  },
+});
 
 export default function Header(props) {
   const classes = useStyles();
+  const createClass=createStyles()
   function makeBrand() {
     var name;
     props.routes.map(prop => {
@@ -35,11 +43,12 @@ export default function Header(props) {
     [" " + classes[color]]: color
   });
   return (
-    <AppBar className={classes.appBar + appBarClasses}>
+    <AppBar title={<img src={havenlogo}/>} className={classes.appBar + appBarClasses}>
       <Toolbar className={classes.container}>
+      <img src={havenlogo} alt="logo" className={createClass.logo} />
         <div className={classes.flex}>
           {/* Here we create navbar brand, based on route name */}
-          <Button color="transparent" href="#" className={classes.title}>
+          <Button  color="transparent" href="#" className={classes.title}>
             {makeBrand()}
           </Button>
         </div>

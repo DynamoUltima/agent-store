@@ -17,7 +17,7 @@ export default function CustomTable(props) {
   const { tableHead, tableData, tableHeaderColor } = props;
   return (
     <div className={classes.tableResponsive}>
-      <Table className={classes.table}>
+      <Table stickyHeader aria-label="sticky table"  className={classes.table}>
         {tableHead !== undefined ? (
           <TableHead className={classes[tableHeaderColor + "TableHeader"]}>
             <TableRow className={classes.tableHeadRow}>

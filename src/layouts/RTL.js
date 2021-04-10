@@ -121,7 +121,7 @@ export default function RTL({ ...rest }) {
           <div className={classes.map}>{switchRoutes}</div>
         )}
         {getRoute() ? <Footer /> : null}
-        <FixedPlugin
+        {/* <FixedPlugin
           handleImageClick={handleImageClick}
           handleColorClick={handleColorClick}
           bgColor={color}
@@ -129,7 +129,7 @@ export default function RTL({ ...rest }) {
           handleFixedClick={handleFixedClick}
           fixedClasses={fixedClasses}
           rtlActive
-        />
+        /> */}
       </div>
     </div>
   );
